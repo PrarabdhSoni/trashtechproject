@@ -1,0 +1,228 @@
+/* Background Layer */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.ibb.co/GpW18nP/bgimg-canvaedit.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.45
+    ); /* White overlay with 45% opacity */
+    z-index: -1; /* Keep it behind the form container */
+  }
+  
+  /* Centering the Signup Box */
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Avi2 Layer */
+  .avi2 {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Avatar Icon */
+  .avi2 .avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #4caf50; /* Green background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -50px auto 20px;
+  }
+  
+  .avi2 .avatar img {
+    width: 70px;
+    height: 70px;
+    fill: #fff;
+  }
+  
+  /* Title */
+  .avi2 h1 {
+    font-size: 28px;
+    color: #4caf50; /* Green text color */
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .avi2 input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #4caf50; /* Slightly thicker border */
+    border-radius: 15px; /* More rounded corners */
+    box-sizing: border-box; /* Ensures proper alignment */
+    font-size: 16px;
+    text-align: center; /* Centralizes the placeholder text */
+  }
+  
+  /* Submit Button */
+  .avi2 button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; 
+    width: auto; 
+    transition: background-color 0.3s ease;
+  }
+  
+  .avi2 button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Link */
+  .avi2 a {
+    display: block;
+    margin-top: 10px;
+    color: #4caf50;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .avi2 a:hover {
+    text-decoration: underline;
+  }
+  .avi2 input::placeholder {
+    color: grey; /* Grey theme for placeholder text */
+    font-style: italic; /* Italicize the placeholder text */
+    text-align: center; /* Ensure placeholder remains centered */
+  }
+  
+  .avi2 input:focus {
+    outline: none; /* Removes default blue outline */
+    border-color: #388e3c; /* Slightly darker green on focus */
+    box-shadow: 0 0 5px rgba(72, 187, 120, 0.5); /* Adds subtle glow */
+  }
+  
+  /* .signupButton {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .signupButton:hover {
+    transform: scale(1.1); /* Slightly enlarge the button */
+    /* background-color: #3e8e41; /* Change to a slightly darker green */
+  /* }  */
+  
+  input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #4caf50; /* Green border on focus */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Green glow effect */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* card fade in and out */
+  
+  /* .signup-container {
+    background-size: 105%; /* Slightly larger background */
+    /* animation: bgZoom 10s infinite alternate;  */
+  /* } */ 
+  
+  @keyframes bgZoom {
+    to {
+      background-size: 100%; /* Zoom out to normal size */
+    }
+  }
+  
+  input::placeholder {
+    color: #9e9e9e; /* Grey */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  input:focus::placeholder {
+    opacity: 0.5; /* Slightly fade on focus */
+  }
+  
+  /* Make the card pulse with a shadow effect */
+  .avi2 {
+    animation: shadowPulse 2s infinite, fadeIn 1s ease forwards;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Slightly move up */
+  }
+  
+  @keyframes shadowPulse {
+    0%,
+    100% {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add a smooth underline effect when hovering over the "Already a Customer?" link */
+  a {
+    position: relative;
+    color: #4caf50;
+    text-decoration: none;
+  }
+  
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+  }
+  
+  a:hover::after {
+    width: 100%; /* Expand underline */
+  }
+  
+  /* SignupPage.css */
+  
+   .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  } 
+   

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+.heading{
+    float: left;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-size: 40px;
+    height: 60px;
+    margin: 10px;
+}
+.navbar div{
+    float: right;
+}
+
+.homebutton{
+    margin-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    font-weight: 400px;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: filter 0.3s ease;
+}
+
+button:hover{
+    filter: brightness(110%);
+    animation: forwards;
+}
+
+.container .RecycleBin img{
+    height: 85vh;
+}
+
+.container{
+    clear: both;
+    margin-bottom: 0px;
+    background-color: #d1efc9;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.homepage{
+
+    z-index:0;
+}
+.conBody{
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    gap: 20px;  
+    height: 100vh;
+    text-align: center;
+}
+
+.conBody p{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.features{
+    background-color: #d1efc9;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.cards{
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+    border-radius: 25px;
+    max-width: 300px;
+}
+@media (max-width: 713px) {
+    .conBody{
+        display: block;
+    }
+    .container .RecycleBin img{
+        height: 350px;
+    }
+    .conBody p{
+        font-size: 30px;
+    }
+    .container{
+        display: flex;               
+        flex-direction: column;      
+        align-items: center;         
+        justify-content: center;     
+        gap: 15px;                  
+        background-color: #d1efc9;   
+        margin: 0;
+    }
+
+    button {
+        margin: 5px;
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+}
+.GetServiceLink{
+    text-align: left;
+    color:#40ae35; 
+    text-decoration: underline;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+    font-size: smaller;
+    background-color: #40ae35;
+    margin: 0;
+}
+footer p{
+    margin: 0;
+    color: white;
+}
